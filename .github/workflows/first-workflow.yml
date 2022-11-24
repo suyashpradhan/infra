@@ -18,3 +18,8 @@ jobs:
           import platform
           print (platform.processor())
         shell: python
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo second job running
+        run: echo 'second job running'
