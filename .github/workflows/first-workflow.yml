@@ -1,0 +1,15 @@
+# @format
+
+name: First Workflow
+on: [push]
+
+jobs:
+  run-shell-command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo greeting
+        run: echo 'hello world'
+      - name: echo check packages
+        run: |
+          node -v
+          npm -v
