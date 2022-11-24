@@ -13,3 +13,8 @@ jobs:
         run: |
           echo 'node version' node -v
           echo 'npm version' npm -v
+      - name: python Command
+        run: |
+          import platform
+          print (platform.processor())
+        shell: python
