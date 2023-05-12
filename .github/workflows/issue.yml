@@ -1,0 +1,15 @@
+# @format
+
+name: Create a comment on new issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  comment-with-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'first comment'
+        run: echo '${{toJSON(github.event)}}' | jq
+        shell: bash
